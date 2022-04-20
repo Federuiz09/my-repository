@@ -218,12 +218,16 @@ footer {
 }
 
 /* Contact css */
+.body-contact {
+  background: #ffff;
+  color: #fff;
+  line-height: 1.6;
+  padding: 0 1.5em;
+}
 
-.content {
-  padding-top: 6rem;
-  max-width: 1170px;
-  margin-left: auto;
-  margin-right: auto;
+.ul {
+  list-style: none;
+  padding: 0;
 }
 
 .logo-contact {
@@ -232,7 +236,7 @@ footer {
 }
 
 .contact-wrapper {
-  box-shadow: 0 0 20px 0 rgb(255, 255, 255, 0.3);
+  box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.3);
 }
 
 .contact-wrapper > * {
@@ -240,7 +244,7 @@ footer {
 }
 
 .contact-form {
-  background: #222222;
+  background: #454457;
 }
 
 .contact-form form {
@@ -248,8 +252,8 @@ footer {
   grid-template-columns: 1fr 1fr;
 }
 
-.contact-form form .block {
-  grid-column: 1 / 3;
+.contact-form form label {
+  display: block;
 }
 
 .contact-form form p {
@@ -257,19 +261,24 @@ footer {
   padding: 1em;
 }
 
-.contact-form form .contact-form form button,
+.contact-form form .block {
+  grid-column: 1 / 3;
+}
+
+.contact-form form button,
 .contact-form form input,
 .contact-form form textarea {
   width: 100%;
   padding: 0.7em;
   border: none;
-  border-bottom: 1px solid #fff;
-  outline: non-e;
   background: none;
+  outline: 0;
+  color: #fff;
+  border-bottom: 1px solid #ffffff;
 }
 
 .contact-form form button {
-  background: #b70e21;
+  background: #454457;
   border: 0;
   text-transform: uppercase;
   padding: 1em;
@@ -277,37 +286,57 @@ footer {
 
 .contact-form form button:hover,
 .contact-form form button:focus {
-  background: #fff;
-  color: black;
+  background: #d63031;
+  color: #fff;
   transition: background-color 1s ease-out;
   outline: 0;
 }
 
+/* CONTACT INFO */
 .contact-info {
   background: #000;
-  color: #fff;
 }
 
 .contact-info h4,
 .contact-info ul,
 .contact-info p {
   text-align: center;
-  padding: 0 0 1rem 0;
+  margin: 0 0 1rem 0;
 }
 
-.contact-info ul {
-  list-style: none;
-  padding: 0;
-}
+/* About-us page */
 
-.contact-info ul li {
-  padding: 0.5em;
+/* LARGE SIZE */
+@media (min-width: 700px) {
+  .body-contact {
+    padding: 0 4em;
+  }
+  .contact-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+  .contact-wrapper > * {
+    padding: 0.5em;
+  }
+  .contact-info h4,
+  .contact-info ul,
+  .contact-info p {
+    text-align: left;
+  }
+
+  .header-contact {
+    height: 5rem;
+  }
 }
 /* Responsive */
 
 @media screen and (max-width: 800px) {
   .header {
     height: auto;
+  }
+
+  .header-contact {
+    height: 5rem;
   }
   .grid {
     grid-gap: 30px;
@@ -317,20 +346,6 @@ footer {
     padding: 0 4rem;
   }
 
-  .contant-wrapper {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-  }
-
-  .contact-wrapper > * {
-    padding: 2em;
-  }
-
-  .contact-info h4,
-  .contact-info ul,
-  .contact-info p {
-    padding: 1em;
-  }
   .menu-icon {
     display: block;
     cursor: pointer;
